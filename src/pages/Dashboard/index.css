@@ -1,0 +1,27 @@
+.stock {
+    display: grid;
+    grid-template-columns: auto max-content 200px;
+    text-align: left;
+    width: 95%;
+    max-width: 850px;
+    margin: auto;
+    padding: 0 10px;
+
+}
+
+.item {
+    border-top: 1px solid black;
+}
+
+.item>* {
+    width: max-content;
+    cursor: pointer;
+}
+
+.price {
+    margin: auto 10px;
+}
+
+.change {
+    margin: auto 50px;
+}

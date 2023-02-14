@@ -1,0 +1,21 @@
+#navbar,
+.nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#navbar {
+    background: rgb(4, 49, 108);
+    width: 100%;
+    margin: 0;
+}
+
+.nav-menu {
+    width: max-content;
+    text-decoration: none;
+    color: White;
+    margin: 0 10px;
+    padding: 10px 0;
+    font-size: 20px;
+}
