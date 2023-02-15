@@ -1,12 +1,24 @@
 
+import { Link } from "react-router-dom";
 import "./index.css"
 
 const Dashboard = (props) => {
+
     let data = props.data;
+
+    const handleStockClick = (e) => {
+        props.setStock(props.data.filter(item => item.symbol === e.target.id))
+    }
+
     let items = data.map((item) => {
+        let route = `/stocks/${item.symbol}`
         return (
             <div key={item.symbol} className="stock item">
-                <p className="name">{item.name}</p>
+                <Link to={route} data={item.symbol}
+                    id={item.symbol} className="name"
+                    onClick={handleStockClick}>
+                    {item.name} - {item.symbol}
+                </Link>
                 <p className="price">{item.lastPrice}</p>
                 <p className="change">{item.change}</p>
             </div>

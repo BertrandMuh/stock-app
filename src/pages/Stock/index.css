@@ -1,0 +1,16 @@
+#stock-container {
+    width: max-content;
+    margin: 20px auto;
+}
+
+#stock-container>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+#name {
+    font-size: 25px;
+}
