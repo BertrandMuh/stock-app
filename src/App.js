@@ -10,9 +10,7 @@ import { useState } from "react"
 
 function App() {
   const [stock, setStock] = useState([])
-  const handleStockClick = (el) => {
 
-  }
   return (
     <div className="App">
       <Nav />
@@ -20,6 +18,7 @@ function App() {
         <Route path='/' element={<Dashboard data={data} setStock={setStock} />} />
         <Route path='/about' element={<About />} />
         <Route path='/stocks/:symbol' element={<Stocks stock={stock} />} />
+        <Route path='/:any' element={<Dashboard data={data} setStock={setStock} />} />
       </Routes>
     </div>
   );

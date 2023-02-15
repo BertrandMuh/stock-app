@@ -10,9 +10,9 @@ const Nav = () => {
             <Link to="/" className="nav-menu">
                 iStocks
             </Link>
-            <Link to="/stocks" className="nav-menu">
+            {/* <Link to="/stocks" className="nav-menu">
                 Stocks
-            </Link>
+            </Link> */}
             <Link to="/about" className="nav-menu">
                 About
             </Link>

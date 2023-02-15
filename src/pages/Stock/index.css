@@ -1,5 +1,6 @@
 #stock-container {
     width: max-content;
+    min-width: 300px;
     margin: 20px auto;
 }
 
@@ -13,4 +14,12 @@
 
 #name {
     font-size: 25px;
+}
+
+strong {
+    margin-right: 20px;
+}
+
+p {
+    width: max-content;
 }

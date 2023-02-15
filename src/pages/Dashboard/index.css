@@ -41,4 +41,17 @@
     cursor: pointer;
     padding: 2px 0;
     margin: 0;
+    font-weight: 480;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red
+}
+
+.neutral {
+    color: black
 }

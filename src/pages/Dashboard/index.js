@@ -12,6 +12,17 @@ const Dashboard = (props) => {
 
     let items = data.map((item) => {
         let route = `/stocks/${item.symbol}`
+        let percentChange = (item.change / item.open * 100).toFixed(2);
+        let pTag
+        if (percentChange > 0) {
+            pTag = <p className="change positive">{item.change.toFixed(4)} (+{percentChange}%)</p>
+        }
+        else if (percentChange < 0) {
+            pTag = <p className="change negative">{item.change.toFixed(4)} ({percentChange}%)</p>
+        }
+        else {
+            pTag = <p className="change neutral">{item.change.toFixed(4)} ({percentChange}%)</p>
+        }
         return (
             <div key={item.symbol} className="stock item">
                 <Link to={route} data={item.symbol}
@@ -19,8 +30,8 @@ const Dashboard = (props) => {
                     onClick={handleStockClick}>
                     {item.name} - {item.symbol}
                 </Link>
-                <p className="price">{item.lastPrice}</p>
-                <p className="change">{item.change}</p>
+                <p className="price">${item.lastPrice}</p>
+                {pTag}
             </div>
         )
     }
